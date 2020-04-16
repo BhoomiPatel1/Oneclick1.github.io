@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:web_app_demo/profile.dart';
 
 class Navbar extends StatelessWidget{
   @override
@@ -7,9 +8,13 @@ class Navbar extends StatelessWidget{
     // TODO: implement build
     return LayoutBuilder(
       builder: (context, constraints){
-        // if (constraints.maxWidth > 1200) {
+        if (constraints.maxWidth > 1200) {
           return DesktopNavBar();
-        // }
+        }else if (constraints.maxWidth > 617 && constraints.maxWidth < 1200) {
+          return DesktopNavBar();
+        } else {
+          return MobileNavBar();
+        }
       },
     );
   }
@@ -32,19 +37,6 @@ class DesktopNavBar extends StatelessWidget{
         ),
         Row(
           children: <Widget>[
-            // Stack(
-            //   children: <Widget>[
-            //       Text("Home",
-            //       style: TextStyle(color: Colors.white),
-            //       ),
-            //       RaisedButton(onPressed: (){
-            //         print("Home Button Click");
-            //       },
-            //       color: Colors.tr,
-            //       )
-                  
-            //   ],
-            // ),
             Text("Home",
                   style: TextStyle(color: Colors.white),
                   ),
@@ -65,6 +57,7 @@ class DesktopNavBar extends StatelessWidget{
             ),
              RaisedButton(onPressed: (){
                   print("Demo Button Click");
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileVC()));
                 },
                 child: Text("Demo"),
              ),
@@ -96,21 +89,11 @@ class MobileNavBar extends StatelessWidget{
           Text("Bhoomi's Web",
         style: TextStyle(fontWeight: FontWeight.bold,color: Colors.lightBlueAccent,fontSize: 30),
         ),
-        Row(
+        Column(
           children: <Widget>[
-            // Stack(
-            //   children: <Widget>[
-            //       Text("Home",
-            //       style: TextStyle(color: Colors.white),
-            //       ),
-            //       RaisedButton(onPressed: (){
-            //         print("Home Button Click");
-            //       },
-            //       color: Colors.tr,
-            //       )
-                  
-            //   ],
-            // ),
+             Row(
+          children: <Widget>[
+           
             Text("Home",
                   style: TextStyle(color: Colors.white),
                   ),
@@ -129,16 +112,33 @@ class MobileNavBar extends StatelessWidget{
              SizedBox(
                 width: 30,
             ),
-             RaisedButton(onPressed: (){
+            //  RaisedButton(onPressed: (){
+            //       print("Demo Button Click");
+            //     },
+            //     child: Text("Demo"),
+            //  ),
+            //   SizedBox(
+            //     width: 30,
+            // ),
+          ],
+        ),
+          Row(
+            children: <Widget>[
+               SizedBox(
+                width: 50,
+            ),
+                  RaisedButton(onPressed: (){
                   print("Demo Button Click");
+                  // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileVC()));
                 },
                 child: Text("Demo"),
              ),
-              SizedBox(
-                width: 30,
-            ),
+             
+            ],
+          )
           ],
         ),
+       
        ],
 
       ),

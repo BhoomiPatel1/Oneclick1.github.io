@@ -34345,7 +34345,7 @@ s[3]=s[3]+t[3]}}
 V.tw.prototype={
 M:function(a){return new A.t1(new V.F3(),null)}}
 V.F3.prototype={
-$2:function(a,b){if(b.b>1200)return new V.r6(null)}}
+$2:function(a,b){return new V.r6(null)}}
 V.r6.prototype={
 M:function(a){var t=null,s=F.dr(a,!1).a,r=u.p
 return new T.jx(C.rB,M.qL(t,T.QN(H.b([L.nX("Bhoomi's Web",A.eR(t,t,C.tY,t,t,t,t,t,t,t,t,30,t,C.b7,t,t,!0,t,t,t,t,t,t)),T.QN(H.b([L.nX("Home",A.eR(t,t,C.j,t,t,t,t,t,t,t,t,t,t,t,t,t,!0,t,t,t,t,t,t)),new T.dA(30,t,t,t),L.nX("About Us",A.eR(t,t,C.j,t,t,t,t,t,t,t,t,t,t,t,t,t,!0,t,t,t,t,t,t)),new T.dA(30,t,t,t),L.nX("Contact Us",A.eR(t,t,C.j,t,t,t,t,t,t,t,t,t,t,t,t,t,!0,t,t,t,t,t,t)),new T.dA(30,t,t,t),new D.up(new V.BO(),t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,t,L.nX("Demo",t),t,t,t,C.al,t,!1,t,t,t),new T.dA(30,t,t,t)],r),C.kA)],r),C.nM),t,new S.ao(0,s.a,0,1/0),t,t,t,t),t)}}
