@@ -7,9 +7,9 @@ class Navbar extends StatelessWidget{
     // TODO: implement build
     return LayoutBuilder(
       builder: (context, constraints){
-        if (constraints.maxWidth > 1200) {
+        // if (constraints.maxWidth > 1200) {
           return DesktopNavBar();
-        }
+        // }
       },
     );
   }
@@ -86,13 +86,63 @@ class MobileNavBar extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Color.fromRGBO(195, 20, 50, 1.0),Color.fromRGBO(36, 11, 54, 1.0)],
-          )
-        )
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child:  Container(
+      constraints: BoxConstraints(maxWidth: MediaQuery. of(context). size. width),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       children: <Widget>[
+          Text("Bhoomi's Web",
+        style: TextStyle(fontWeight: FontWeight.bold,color: Colors.lightBlueAccent,fontSize: 30),
+        ),
+        Row(
+          children: <Widget>[
+            // Stack(
+            //   children: <Widget>[
+            //       Text("Home",
+            //       style: TextStyle(color: Colors.white),
+            //       ),
+            //       RaisedButton(onPressed: (){
+            //         print("Home Button Click");
+            //       },
+            //       color: Colors.tr,
+            //       )
+                  
+            //   ],
+            // ),
+            Text("Home",
+                  style: TextStyle(color: Colors.white),
+                  ),
+            SizedBox(
+                width: 30,
+            ),
+            Text("About Us",
+            style: TextStyle(color: Colors.white),
+            ),
+             SizedBox(
+                width: 30,
+            ),
+            Text("Contact Us",
+            style: TextStyle(color: Colors.white),
+            ),
+             SizedBox(
+                width: 30,
+            ),
+             RaisedButton(onPressed: (){
+                  print("Demo Button Click");
+                },
+                child: Text("Demo"),
+             ),
+              SizedBox(
+                width: 30,
+            ),
+          ],
+        ),
+       ],
+
       ),
+    ),
     );
   }
   
