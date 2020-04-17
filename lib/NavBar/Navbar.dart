@@ -138,9 +138,7 @@ class MobileNavBar extends StatelessWidget{
           )
           ],
         ),
-       
        ],
-
       ),
     ),
     );
