@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:web_app_demo/profile.dart';
+import 'dart:html' as html;
 
 class Navbar extends StatelessWidget{
   @override
@@ -55,10 +57,7 @@ class DesktopNavBar extends StatelessWidget{
              SizedBox(
                 width: 30,
             ),
-             RaisedButton(onPressed: (){
-                  print("Demo Button Click");
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileVC()));
-                },
+             RaisedButton(onPressed: _launchURL,
                 child: Text("Demo"),
              ),
               SizedBox(
@@ -73,6 +72,12 @@ class DesktopNavBar extends StatelessWidget{
     );
   }
   
+}
+
+_launchURL() async {
+ 
+  html.window.open("https://flutter.dev/", "Home page");
+            
 }
 
 class MobileNavBar extends StatelessWidget{
@@ -127,10 +132,7 @@ class MobileNavBar extends StatelessWidget{
                SizedBox(
                 width: 50,
             ),
-                  RaisedButton(onPressed: (){
-                  print("Demo Button Click");
-                  // Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileVC()));
-                },
+                  RaisedButton(onPressed: _launchURL,
                 child: Text("Demo"),
              ),
              
